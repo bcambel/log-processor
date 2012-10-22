@@ -1,11 +1,8 @@
 #!bin/python
-import argparse
 import logging
 
 from multiprocessing import Pool
-import multiprocessing
 from args import parse_arguments
-import os
 import time
 import sys
 import signal
@@ -19,8 +16,6 @@ import atexit
 #logger = multiprocessing.log_to_stderr(multiprocessing.SUBDEBUG)
 #logger.warn("Multiprocessing Logger level to INFO")
 
-#DIR = "/Users/bcambel/Downloads/logs/"
-#%(filename)s %(lineno)d
 logging.basicConfig(format='%(asctime)s|%(levelname)s%(message)s',level=logging.NOTSET)
 
 
@@ -252,7 +247,7 @@ if __name__ == "__main__":
 
 	inform( "OS_SIGNALS Registered" )
 
-	print "Listening and Writing Directory set to %s" % DIR
+	inform( "Listening and Writing Directory set to %s" % DIR )
 
 	try:
 		monitor.begin()

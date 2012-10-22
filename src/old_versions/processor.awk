@@ -1,6 +1,6 @@
 #! /usr/bin/awk -f
 BEGIN {
-	FPAT = "/screenad_launch/"
+	FPAT = "/some_pattern/"
 }
 {
 	count += 1

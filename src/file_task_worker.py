@@ -211,8 +211,8 @@ class FileTaskWorker(Model,Informant):
 				output_info.write("Started: %s\n" % self.__time_start)
 				output_info.write("Ended: %s\n" % self.__time_end)
 				output_info.write("Duration: %s\n" % how_long)
-				output_info.write("Log file has %d\n" % self.line_cursor)
-				output_info.write("Outputted %d\n" % self.eligible_count)
+				output_info.write("LineCount: %d\n" % self.line_cursor)
+				output_info.write("Outputted: %d\n" % self.eligible_count)
 
 		except IOError as e:
 			logging.exception(e)

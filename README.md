@@ -13,6 +13,7 @@ Unzip operation uses multiprocessing.Pool to parallelize the tasks.
 
 Installation
 -----------
+Requires >= Python 2.7
 
 `git clone https://github.com/bcambel/log-processor.git`
 

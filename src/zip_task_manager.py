@@ -22,10 +22,7 @@ def unzip_file(dir_zip_tuple):
 	log_collection = Model.connection().logs
 	log_file = zip_file[:-3]
 	logging.info("Opening process of %s" % zip_file)
-#	print existing_id
 
-
-	process_id = -1
 	zip_proc = Popen(["gzip","-d",directory+zip_file],shell=False,stderr=subprocess.STDOUT)
 	process_id = zip_proc.pid
 
@@ -58,11 +55,6 @@ def unzip_file(dir_zip_tuple):
 	log_collection.update({"_id":zip_file_id},{"$set": dict(file=log_file,status=zip_status,zip_code=return_code,zip_finish=dt.utcnow())})
 
 	return zip_file
-
-#def file_worker(directory,file):
-#	ftw = FileTaskWorker()
-#	ftw.doJob(directory,file)
-
 
 
 class ZipTaskManager(Model,Informant):
@@ -156,10 +148,7 @@ class ZipTaskManager(Model,Informant):
 				if existing_id is None:
 					existing_id = self.logs_collection.insert(dict(zip_file=z,status="scheduled",scheduled_at=dt.utcnow()))
 					self.place_job_to_queue(z,existing_id)
-#				unzip_file((self.__folder_to_watch__,z,existing_id))
 
-
-#			pool_handle.wait()
 
 		self.inform( "Job has been completed..." )
 
@@ -183,7 +172,5 @@ if __name__ == "__main__":
 		sys.exit(0)
 
 	signal.signal(signal.SIGINT, signal_handler)
-
-
 
 	ztm.loop()
