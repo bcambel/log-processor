@@ -29,7 +29,8 @@ After installation complete run the command `source venv/bin/activate`. This com
 
 The only real dependency is `PyMongo` `pip install pymongo` will install pymongo and refer it to the project.
 
-### Run
+Run
+---------
 The most important files are "src/zip_task_manager.py", "src/file_task_monitor" -> "src/file_task_worker"
 
 - Basic Usage `./run.bash <directory>` script to execute the script
