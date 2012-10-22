@@ -40,7 +40,7 @@ def file_processor(log_file):
 	Move to the location. 
 	"""
 	connection = pymongo.Connection(db_host,27017,auto_start_request=False)
-	db = connection.youngsons
+	db = connection.log_processor
 	
 	file_name = DIR+log_file
 	db_file_info = db.logs.find_one({"file":file_name})

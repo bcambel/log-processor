@@ -15,7 +15,7 @@ def initialize(is_production=None):
 	global db_host,connection,db
 
 	connection = pymongo.Connection(db_host,27017,auto_start_request=False)
-	db = connection.youngsons
+	db = connection.log_processor
 
 class Model(object):
 	

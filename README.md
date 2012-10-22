@@ -1,15 +1,18 @@
 
-# [WARNING] Not Tested in production env or long running. Use on your own risk
+### [WARNING] Not Tested in production env or long running. Use on your own risk
 
 Unzip and Map-Reduce Log Files
 ===================
 
 > MongoDb backed Log file processor for zipped huge log files.
+
+
 Uses MultiProcessing to create processes to execute the unzipping and map reduce operation.
+
 Unzip operation uses multiprocessing.Pool to parallelize the tasks.
 
 Installation
-===================
+-----------
 
 `git clone https://github.com/bcambel/log-processor.git`
 
@@ -51,7 +54,7 @@ to print help
 
 
 Performance
-============================
+-----------
 Basic calculations shows that ~30secs required to process 1.5M lines of log.
 In total 6 log files more than 8M lines are processed within 01min 30secs.
 The configuration was
