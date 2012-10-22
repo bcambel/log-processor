@@ -1,10 +1,10 @@
 
-### [WARNING] Not Tested in production env or long running. Use on your own risk
+### [WARNING] Not Tested in production env or long running. Use on your own risk. Think of this as a learning lib.
 
 Unzip and Map-Reduce Log Files
 ===================
 
-	*MongoDb backed Log file processor for zipped huge log files.*
+	MongoDb backed Log file processor for huge zipped log files.
 
 
 Uses MultiProcessing to create processes to execute the unzipping and map reduce operation.
