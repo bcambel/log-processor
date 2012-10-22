@@ -9,7 +9,7 @@ Unzip operation uses multiprocessing.Pool to parallelize the tasks.
 Installation
 ===================
 
-git clone https://github.com/bcambel/log-processor.git
+`git clone https://github.com/bcambel/log-processor.git`
 
 Best way to manage Python and third party libraries is using virtualenv - http://www.virtualenv.org/en/latest/#installation
 
