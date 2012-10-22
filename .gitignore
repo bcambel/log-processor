@@ -30,3 +30,6 @@ pip-log.txt
 *.log
 #virtualenv
 venv
+# PyCharm
+.idea
+.Python
