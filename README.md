@@ -1,4 +1,6 @@
 
+[WARNING] Not Tested in production env or long running. Use on your own risk
+
 Unzip and Map-Reduce Log Files
 ===================
 
@@ -48,4 +50,12 @@ Use `args.py` or `./run.sh -h`
 to print help
 
 
+Performance
+============================
+Basic calculations shows that ~30secs required to process 1.5M lines of log.
+In total 6 log files more than 8M lines are processed within 01min 30secs.
+The configuration was
+
+`python src/zip_task_manager.py --input-dir=<directory> --max-proc=1 --flush=10000`
+`python src/file_task_monitor.py --input-dir=<directory> --max-proc=4 --flush=10000`
 
